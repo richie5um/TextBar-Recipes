@@ -12,7 +12,7 @@ Please submit pull-requests so that I can add your ideas/scripts.
     ipconfig getifaddr en0
 
 ### What is my external IP address?
-    curl -s -H 'Accept: application/json' ipinfo.io | python -c "import json;import sys;print json.load(sys.stdin)['ip']"
+    curl http://ipinfo.io/ip
 
 ### How much disk space am I using?
     df / | awk '{ print $5 }' | tail -n 1
