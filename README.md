@@ -32,6 +32,7 @@ Please submit pull-requests so that I can add your ideas/scripts.
 
 ### What song (and album) is playing in iTunes?
     TRACK=\`osascript -e 'tell application "iTunes"' -e 'set currentTrackName to "[OFF]"' -e 'if player state is playing then' -e 'set currentTrackName to get name of current track & " [" & album of current track & "]"' -e 'end if' -e 'return currentTrackName' -e 'end tell'\` ; echo "> $TRACK"
+> This isn't ideal, as it'll launch iTunes if it isn't running. It should really check if iTunes is running before using the AppleScript. Let me know if you have a better solution.
     
 ### Unicode Weather
     curl weather.mar.cx/Manchester,_UK | grep "<title>" | cut -d'>' -f2 | cut -d' ' -f1
