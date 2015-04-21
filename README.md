@@ -28,3 +28,7 @@ Please submit pull-requests so that I can add your ideas/scripts.
 
 ### What song (and album) is playing in iTunes?
     TRACK=\`osascript -e 'tell application "iTunes"' -e 'set currentTrackName to "[OFF]"' -e 'if player state is playing then' -e 'set currentTrackName to get name of current track & " [" & album of current track & "]"' -e 'end if' -e 'return currentTrackName' -e 'end tell'\` ; echo "> $TRACK"
+    
+### Unicode Weather
+    curl weather.mar.cx/Manchester,_UK | grep "<title>" | cut -d'>' -f2 | cut -d' ' -f1
+> This is likely to break as it isn't entirely robust. Edit the location to get your weather.
