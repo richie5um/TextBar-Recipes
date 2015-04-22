@@ -55,3 +55,19 @@ Please submit pull-requests so that I can add your ideas/scripts.
 
 ### Character Count of current clipboard
     pbpaste | wc -c
+
+## HTML
+From v1.3.3, TextBar can render _basic_ HTML into your TextBar item. The text must begin with "<html>", or end with "</html>" - must be in lowercase! - for it to be renderred as HTML.
+
+The HTML support is fairly limited, it supports text and images. The text can be styled using embedded CSS, the images can't. Images should be resized to about 14x14.
+
+### Hello World
+    echo '<html><b>Hel</b>lo <i>wor</i>ld</html>'
+    
+### Display Image
+    echo '<html><img src="http://www......."/></html>'
+> You can't resize the image, so make sure it is 14x14 pixels for it to show correctly.
+
+### CSS Styled Text
+    cat '$HOME/scripts/apple.html'
+> Download apple.html to your machine (to ~/scripts), and then add this to TextBar.
