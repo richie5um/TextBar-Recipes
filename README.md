@@ -41,3 +41,11 @@ Please submit pull-requests so that I can add your ideas/scripts.
 ### Unread Emails in Outlook
     osascript $HOME/scripts/CheckOutlookMail.scpt
 > Download CheckOutlookMail.scpt to your machine (to ~/scripts), and then add this to TextBar.
+
+### Show the clipboard (text)
+    pbpaste | sed 's/^[[:space:]]*//;s/[[:space:]]$//' | sed -E 's/^(.{10}).+$/\1.../'
+> This looks more complex than you might imagine. It; strips leading and trailing whitespace, displays only 10 chars (and if it exceeds 10 characters, it'll display the ellipsis).
+> Obviously, if you 'Copy to Clipboard' on this, you'll get the truncated text - but, as it is already on the clipboard, you don't need to copy it :-).
+
+### Character Count of current clipboard
+    pbpaste | wc -c
