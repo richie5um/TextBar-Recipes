@@ -45,7 +45,8 @@ Please submit pull-requests so that I can add your ideas/scripts.
 ### Next Meeting in Outlook
     osascript $HOME/scripts/OutlookNextMeeting.scpt
 > Download OutlookNextMeeting.scpt to your machine (to ~/scripts), and then add this to TextBar.
-> Edit OutlookNextMeeting.scrpt if you want the text formatted differently.
+> Edit OutlookNextMeeting.scpt if you want the text formatted differently.
+> Note: This only looks 60 mins into the future. You can edit OutlookNextMeeting.scpt if you want longer. 
 
 ### Show the clipboard (text)
     pbpaste | sed 's/^[[:space:]]*//;s/[[:space:]]$//' | sed -E 's/^(.{10}).+$/\1.../'
