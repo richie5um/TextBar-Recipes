@@ -42,6 +42,12 @@ Please submit pull-requests so that I can add your ideas/scripts.
     osascript $HOME/scripts/CheckOutlookMail.scpt
 > Download CheckOutlookMail.scpt to your machine (to ~/scripts), and then add this to TextBar.
 
+### Next Meeting in Outlook
+    osascript $HOME/scripts/OutlookNextMeeting.scpt
+> Download OutlookNextMeeting.scpt to your machine (to ~/scripts), and then add this to TextBar.
+> Edit OutlookNextMeeting.scpt if you want the text formatted differently.
+> Note: This only looks 60 mins into the future. You can edit OutlookNextMeeting.scpt if you want longer. 
+
 ### Show the clipboard (text)
     pbpaste | sed 's/^[[:space:]]*//;s/[[:space:]]$//' | sed -E 's/^(.{10}).+$/\1.../'
 > This looks more complex than you might imagine. It; strips leading and trailing whitespace, displays only 10 chars (and if it exceeds 10 characters, it'll display the ellipsis).
