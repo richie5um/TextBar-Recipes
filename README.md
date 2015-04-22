@@ -57,7 +57,7 @@ Please submit pull-requests so that I can add your ideas/scripts.
     pbpaste | wc -c
 
 ## HTML
-From v1.3.3, TextBar can render _basic_ HTML into your TextBar item. The text must begin with "<html>", or end with "</html>" - must be in lowercase! - for it to be renderred as HTML.
+From v1.3.3, TextBar can render _basic_ HTML into your TextBar item. The text must begin with ```<html>```, or end with ```</html>``` - must be in lowercase! - for it to be renderred as HTML.
 
 The HTML support is fairly limited, it supports text and images. The text can be styled using embedded CSS, the images can't. Images should be resized to about 14x14.
 
