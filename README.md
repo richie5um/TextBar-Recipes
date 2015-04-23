@@ -6,7 +6,7 @@ Recipes for TextBar app (www.richsomerfield.com/apps).
 ## Contributions
 Please submit pull-requests so that I can add your ideas/scripts.
 
-## Recipies
+## Recipes
 
 ### What is my Local IP address?
     ipconfig getifaddr en0
