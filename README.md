@@ -71,3 +71,6 @@ The HTML support is fairly limited, it supports text and images. The text can be
 ### CSS Styled Text
     cat '$HOME/scripts/apple.html'
 > Download apple.html to your machine (to ~/scripts), and then add this to TextBar.
+
+### Is my External drive mounted (with HTML Styled Text)?
+    [ -d /Volumes/MyExtDrive ] && echo "<html><font face=\"helveticaneue-thin\"> MyExtDrive mounted</font></html>" || echo "<html><font face=\"helveticaneue-thin\">MyExtDrive <font color=red><b>not</b></font> mounted</font></html>"
