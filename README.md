@@ -6,7 +6,7 @@ Recipes for TextBar app (www.richsomerfield.com/apps).
 ## Contributions
 Please submit pull-requests so that I can add your ideas/scripts.
 
-## Recipies
+## Recipes
 
 ### What is my Local IP address?
     ipconfig getifaddr en0
@@ -31,8 +31,8 @@ Please submit pull-requests so that I can add your ideas/scripts.
     ioreg -n AppleSmartBattery -r | awk '$1~/Capacity/{c[$1]=$3} END{OFMT="%.2f%%"; max=c["\"MaxCapacity\""]; print (max>0? 100*c["\"CurrentCapacity\""]/max: "?")}'
 
 ### What song (and artist) is playing in iTunes?
-    osascript -e 'if application "iTunes" is running then' -e 'tell application "iTunes"' -e 'if player state = playing then' -e '(get name of current track) & " – " & (get artist of current track)' -e 'else' -e 'return ""' -e 'end if' -e 'end tell' -e 'else' -e 'return ""' -e 'end if'
-> If iTunes is running and a song is playing, this will display the current song name and artist name.
+    osascript -e 'if application "iTunes" is running then' -e 'tell application "iTunes"' -e 'if player state = playing then' -e 'set songName to (get name of current track)' -e 'set artistName to (get artist of current track)' -e 'if length of songName > 20 then' -e 'set shortSongName to text 1 thru 20 of songName & "…"' -e 'set songName to shortSongName' -e 'end if' -e 'if length of artistName > 20 then' -e 'set shortArtistName to text 1 thru 20 of artistName & "…"' -e 'set artistName to shortArtistName' -e 'end if' -e 'set title to songName & " – " & artistName' -e 'return title' -e 'else' -e 'return ""' -e 'end if' -e 'end tell' -e 'else' -e 'return ""' -e 'end if'
+> If iTunes is running and a song is playing, this will display the current song name and artist name. Each are a max of 20 characters long.
     
 ### Unicode Weather
     curl weather.mar.cx/Manchester,_UK | grep "<title>" | cut -d'>' -f2 | cut -d' ' -f1
