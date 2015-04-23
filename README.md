@@ -30,9 +30,9 @@ Please submit pull-requests so that I can add your ideas/scripts.
 ### What is my battery charge?
     ioreg -n AppleSmartBattery -r | awk '$1~/Capacity/{c[$1]=$3} END{OFMT="%.2f%%"; max=c["\"MaxCapacity\""]; print (max>0? 100*c["\"CurrentCapacity\""]/max: "?")}'
 
-### What song (and album) is playing in iTunes?
-    TRACK=\`osascript -e 'tell application "iTunes"' -e 'set currentTrackName to "[OFF]"' -e 'if player state is playing then' -e 'set currentTrackName to get name of current track & " [" & album of current track & "]"' -e 'end if' -e 'return currentTrackName' -e 'end tell'\` ; echo "> $TRACK"
-> This isn't ideal, as it'll launch iTunes if it isn't running. It should really check if iTunes is running before using the AppleScript. Let me know if you have a better solution.
+### What song (and artist) is playing in iTunes?
+    osascript -e 'if application "iTunes" is running then' -e 'tell application "iTunes"' -e 'if player state = playing then' -e '(get name of current track) & " – " & (get artist of current track)' -e 'else' -e 'return ""' -e 'end if' -e 'end tell' -e 'else' -e 'return ""' -e 'end if'
+> If iTunes is running and a song is playing, this will display the current song name and artist name.
     
 ### Unicode Weather
     curl weather.mar.cx/Manchester,_UK | grep "<title>" | cut -d'>' -f2 | cut -d' ' -f1
