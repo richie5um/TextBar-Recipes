@@ -34,6 +34,11 @@ Please submit pull-requests so that I can add your ideas/scripts.
     osascript -e 'if application "iTunes" is running then' -e 'tell application "iTunes"' -e 'if player state = playing then' -e '(get name of current track) & " – " & (get artist of current track)' -e 'else' -e 'return ""' -e 'end if' -e 'end tell' -e 'else' -e 'return ""' -e 'end if'
 > If iTunes is running and a song is playing, this will display the current song name and artist name.
     
+### Weather
+    curl -s 'http://api.openweathermap.org/data/2.5/weather?q=Manchester,UK&units=metric' | python -c 'import sys, json; data=json.load(sys.stdin); print("{} : {:.1f}°C".format(data["weather"][0]["main"], data["main"]["temp"]))'
+> Don't refresh too frequently as this service is rate limited. 
+> You'll need to change "Manchester,UK" to your location, unless you actually live in Manchester :-).
+    
 ### Unicode Weather
     curl weather.mar.cx/Manchester,_UK | grep "<title>" | cut -d'>' -f2 | cut -d' ' -f1
 > This is likely to break as it isn't entirely robust. Edit the location to get your weather.
