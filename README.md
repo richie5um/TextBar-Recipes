@@ -68,6 +68,13 @@ Please submit pull-requests so that I can add your ideas/scripts.
 ### Character Count of current clipboard
     pbpaste | wc -c
 
+### Mouse and Keyboard Battery Status
+    echo "M: "`ioreg -c BNBMouseDevice | grep '"BatteryPercent" ='  |  sed 's/[^0-9]*//g'`"%"
+    echo "B:" `ioreg -c AppleBluetoothHIDKeyboard | grep '"BatteryPercent" ='  | sed 's/[^0-9]*//g'`"%"
+
+![Battery](Screenshots/MouseKeyboardBattery.png)
+
+
 ## HTML
 From v1.3.3, TextBar can render _basic_ HTML into your TextBar item. The text must begin with ```<html>```, or end with ```</html>``` - must be in lowercase! - for it to be renderred as HTML.
 
