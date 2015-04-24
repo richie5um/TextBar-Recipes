@@ -75,6 +75,9 @@ Please submit pull-requests so that I can add your ideas/scripts.
 ![Battery](Screenshots/MouseKeyboardBattery.png)
 > Add these as two separate items.
 
+### Stackoverflow Reputation (replace 22656 by your SO account number)
+    json=$(curl -s http://stackoverflow.com/users/flair/22656.json) && echo $json | sed 's/,//g;s/^.*reputation...\([0-9]*\).*$/\1/'
+
 ## HTML
 From v1.3.3, TextBar can render _basic_ HTML into your TextBar item. The text must begin with ```<html>```, or end with ```</html>``` - must be in lowercase! - for it to be renderred as HTML.
 
