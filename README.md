@@ -38,12 +38,14 @@ Please submit pull-requests so that I can add your ideas/scripts.
     osascript -e 'if application "Spotify" is running then' -e 'tell application "Spotify"' -e 'if player state is playing then' -e 'return "♫ " & (artist of current track as string) & " - " & (name of current track as string)' -e 'end if' -e 'end tell' -e 'end if'
 > If Spotify is running and a song is playing, this will display the current song name and artist name.
 
-    
+
 ### Weather
     curl -s 'http://api.openweathermap.org/data/2.5/weather?q=Manchester,UK&units=metric' | python -c 'import sys, json; data=json.load(sys.stdin); print("{} : {:.1f}°C".format(data["weather"][0]["main"], data["main"]["temp"]))'
-> Don't refresh too frequently as this service is rate limited. 
+
+![Weather](Screenshots/Weather.png)
+> Don't refresh too frequently as this service is rate limited.
 > You'll need to change "Manchester,UK" to your location, unless you actually live in Manchester :-).
-    
+
 ### Unicode Weather
     curl weather.mar.cx/Manchester,_UK | grep "<title>" | cut -d'>' -f2 | cut -d' ' -f1
 > This is likely to break as it isn't entirely robust. Edit the location to get your weather.
@@ -56,7 +58,7 @@ Please submit pull-requests so that I can add your ideas/scripts.
     osascript $HOME/scripts/OutlookNextMeeting.scpt
 > Download OutlookNextMeeting.scpt to your machine (to ~/scripts), and then add this to TextBar.
 > Edit OutlookNextMeeting.scpt if you want the text formatted differently.
-> Note: This only looks 60 mins into the future. You can edit OutlookNextMeeting.scpt if you want longer. 
+> Note: This only looks 60 mins into the future. You can edit OutlookNextMeeting.scpt if you want longer.
 
 ### Show the clipboard (text)
     pbpaste | sed 's/^[[:space:]]*//;s/[[:space:]]$//' | sed -E 's/^(.{10}).+$/\1.../'
@@ -73,7 +75,7 @@ The HTML support is fairly limited, it supports text and images. The text can be
 
 ### Hello World
     echo '<html><b>Hel</b>lo <i>wor</i>ld</html>'
-    
+
 ### Display Image
     echo '<html><img src="http://www......."/></html>'
 > You can't resize the image, so make sure it is 14x14 pixels for it to show correctly.
