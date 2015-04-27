@@ -34,6 +34,7 @@ Please submit pull-requests so that I can add your ideas/scripts.
     $HOME/bin/scripts/CPUSpeed.sh
 > Download CPUSpeed.sh to your machine (to ~/scripts), and then add this to TextBar.
 > Note: This is fairly basic. It is very slow to use ```top``` to calculate the CPU, but, I've not come across a better way yet.
+
 ![CPUSpeed](Screenshots/CPUSpeed.png)
 
 ### What song (and artist) is playing in iTunes?
