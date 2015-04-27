@@ -75,7 +75,7 @@ Please submit pull-requests so that I can add your ideas/scripts.
 ![Battery](Screenshots/MouseKeyboardBattery.png)
 > Add these as two separate items.
 
-### Stackoverflow Reputation 
+### Stackoverflow Reputation
     json=$(curl -s http://stackoverflow.com/users/flair/22656.json) && echo $json | sed 's/,//g;s/^.*reputation...\([0-9]*\).*$/\1/'
 > (replace 22656 by your SO account number)
 
@@ -101,3 +101,19 @@ The HTML support is fairly limited, it supports text and images. The text can be
 
 ### Is my External drive mounted (with HTML Styled Text)?
     [ -d /Volumes/MyExtDrive ] && echo "<html><font face=\"helveticaneue-thin\"> MyExtDrive mounted</font></html>" || echo "<html><font face=\"helveticaneue-thin\">MyExtDrive <font color=red><b>not</b></font> mounted</font></html>"
+
+## Preferences
+> Requires v1.4.9 (or later)
+I'm working on a UI screen for preferences, but, until then you can set the Default Font/Font-Size, and Shell using ```defaults write```
+
+### How to set the default Font
+    defaults write com.RichSomerfield.TextBar DefaultFontName -string "HelveticaNeue-UltraLight"
+> Requires a restart of the TextBar app
+
+### How to set the default Font-Size
+    defaults write com.RichSomerfield.TextBar textBarPreferences.DefaultFontSize -int 10
+> Requires a restart of the TextBar app
+
+### How to set the default Shell
+    defaults write com.RichSomerfield.TextBar DefaultShell -string "/bin/sh"
+> Requires a restart of the TextBar app
