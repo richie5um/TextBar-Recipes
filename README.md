@@ -31,7 +31,7 @@ Please submit pull-requests so that I can add your ideas/scripts.
     ioreg -n AppleSmartBattery -r | awk '$1~/Capacity/{c[$1]=$3} END{OFMT="%.2f%%"; max=c["\"MaxCapacity\""]; print (max>0? 100*c["\"CurrentCapacity\""]/max: "?")}'
 
 ### Show CPU 'graph'
-    $HOME/bin/scripts/CPUSpeed.sh
+    $HOME/scripts/CPUSpeed.sh
 > Download CPUSpeed.sh to your machine (to ~/scripts), and then add this to TextBar.
 > Note: This is fairly basic. It is very slow to use ```top``` to calculate the CPU, but, I've not come across a better way yet.
 
