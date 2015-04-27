@@ -30,6 +30,12 @@ Please submit pull-requests so that I can add your ideas/scripts.
 ### What is my battery charge?
     ioreg -n AppleSmartBattery -r | awk '$1~/Capacity/{c[$1]=$3} END{OFMT="%.2f%%"; max=c["\"MaxCapacity\""]; print (max>0? 100*c["\"CurrentCapacity\""]/max: "?")}'
 
+### Show CPU 'graph'
+    $HOME/bin/scripts/CPUSpeed.sh
+> Download CPUSpeed.sh to your machine (to ~/scripts), and then add this to TextBar.
+> Note: This is fairly basic. It is very slow to use ```top``` to calculate the CPU, but, I've not come across a better way yet.
+![CPUSpeed](Screenshots/CPUSpeed.png)
+
 ### What song (and artist) is playing in iTunes?
     osascript -e 'if application "iTunes" is running then' -e 'tell application "iTunes"' -e 'if player state = playing then' -e '(get name of current track) & " – " & (get artist of current track)' -e 'else' -e 'return ""' -e 'end if' -e 'end tell' -e 'else' -e 'return ""' -e 'end if'
 > If iTunes is running and a song is playing, this will display the current song name and artist name.
@@ -37,7 +43,6 @@ Please submit pull-requests so that I can add your ideas/scripts.
 ### What song (and artist) is playing in Spotify?
     osascript -e 'if application "Spotify" is running then' -e 'tell application "Spotify"' -e 'if player state is playing then' -e 'return "♫ " & (artist of current track as string) & " - " & (name of current track as string)' -e 'end if' -e 'end tell' -e 'end if'
 > If Spotify is running and a song is playing, this will display the current song name and artist name.
-
 
 ### Weather
     curl -s 'http://api.openweathermap.org/data/2.5/weather?q=Manchester,UK&units=metric' | python -c 'import sys, json; data=json.load(sys.stdin); print("{} : {:.1f}°C".format(data["weather"][0]["main"], data["main"]["temp"]))'
