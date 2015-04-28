@@ -89,6 +89,10 @@ Please submit pull-requests so that I can add your ideas/scripts.
     VBoxManage list runningvms | egrep -oh '[a-z]+_default' | awk -F'_' '{print $1}' | paste -s -d", " -
 > Show all currently running vagrant boxes (VirtualBox only)
 
+### Show Selected File in Finder
+    osascript $HOME/scripts/SelectedFinderFile.scpt
+> Download SelectedFinderFile.scpt to your machine (to ~/scripts), and then add this to TextBar.
+
 ## HTML
 From v1.3.3, TextBar can render _basic_ HTML into your TextBar item. The text must begin with ```<html>```, or end with ```</html>``` - must be in lowercase! - for it to be renderred as HTML.
 
