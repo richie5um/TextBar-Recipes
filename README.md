@@ -109,7 +109,8 @@ The HTML support is fairly limited, it supports text and images. The text can be
     [ -d /Volumes/MyExtDrive ] && echo "<html><font face=\"helveticaneue-thin\"> MyExtDrive mounted</font></html>" || echo "<html><font face=\"helveticaneue-thin\">MyExtDrive <font color=red><b>not</b></font> mounted</font></html>"
 
 ## Preferences
-> Requires v1.4.9 (or later)
+> Requires TextBar v1.4.9 (or later)
+
 I'm working on a UI screen for preferences, but, until then you can set the Default Font/Font-Size, and Shell using ```defaults write```
 
 ### How to set the default Font
@@ -123,3 +124,13 @@ I'm working on a UI screen for preferences, but, until then you can set the Defa
 ### How to set the default Shell
     defaults write com.RichSomerfield.TextBar DefaultShell -string "/bin/sh"
 > Requires a restart of the TextBar app
+
+### How to set the default Max Width of textbar items
+    defaults write com.RichSomerfield.TextBar DefaultMaxWidth -int 100
+> Requires TextBar v1.4.47 (or later)
+
+> Requires a restart of the TextBar app
+
+> Note: This is in points. Use '0' for unlimited.
+
+> Note: This only works on OS X Yosemite (10.10)
