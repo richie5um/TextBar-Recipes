@@ -9,7 +9,7 @@ Please submit pull-requests so that I can add your ideas/scripts.
 ## Recipies
 
 ### What is my Local IP address?
-    ipconfig getifaddr en0
+    ifconfig | grep inet | grep -v inet6 | cut -d" " -f2 | tail -n1
 
 ### What is my external IP address?
     curl http://ipinfo.io/ip
