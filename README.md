@@ -46,6 +46,7 @@ Please submit pull-requests so that I can add your ideas/scripts.
     $HOME/scripts/cpubar.sh
 
 ![CPUBar](Screenshots/CPUBar.png)
+> Download cpubar.sh to your machine (to ~/scripts), and then add this to TextBar. 
 > Requires TextBar 1.5.174 or later.
 
 ### What song (and artist) is playing in iTunes?
