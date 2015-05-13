@@ -6,6 +6,11 @@ Recipes for TextBar app (www.richsomerfield.com/apps).
 ## Contributions
 Please submit pull-requests so that I can add your ideas/scripts.
 
+## Latest Features (New in 1.5.174)
+
+* ANSI escape coloring (see below for an example)
+* Multi-line scripts (see below for an example)
+
 ## Recipies
 
 ### What is my Local IP address?
@@ -37,6 +42,12 @@ Please submit pull-requests so that I can add your ideas/scripts.
 
 ![CPUSpeed](Screenshots/CPUSpeed.png)
 
+### Show CPU 'graph' - version 2
+    $HOME/scripts/cpubar.sh
+
+![CPUBar](Screenshots/CPUBar.png)
+> Requires TextBar 1.5.174 or later.
+
 ### What song (and artist) is playing in iTunes?
     osascript -e 'if application "iTunes" is running then' -e 'tell application "iTunes"' -e 'if player state = playing then' -e '(get name of current track) & " – " & (get artist of current track)' -e 'else' -e 'return ""' -e 'end if' -e 'end tell' -e 'else' -e 'return ""' -e 'end if'
 > If iTunes is running and a song is playing, this will display the current song name and artist name.
@@ -55,6 +66,13 @@ Please submit pull-requests so that I can add your ideas/scripts.
 ### Unicode Weather
     curl weather.mar.cx/Manchester,_UK | grep "<title>" | cut -d'>' -f2 | cut -d' ' -f1
 > This is likely to break as it isn't entirely robust. Edit the location to get your weather.
+
+### Show (Local) Git Repo Status
+    $HOME/scripts/git_status.sh TextBar "$HOME/Code/TextBar"
+
+![GitStatus](Screenshots/GitStatus.png)
+> Download git_status.sh to your machine (to ~/scripts), and then add this to TextBar.
+> Requires TextBar 1.5.174 or later
 
 ### Unread Emails in Outlook
     osascript $HOME/scripts/CheckOutlookMail.scpt
@@ -92,6 +110,15 @@ Please submit pull-requests so that I can add your ideas/scripts.
 ### Show Selected File in Finder
     osascript $HOME/scripts/SelectedFinderFile.scpt
 > Download SelectedFinderFile.scpt to your machine (to ~/scripts), and then add this to TextBar.
+
+## ANSI Escape Colors
+    echo 'Normal \e[41m Other '
+> This is an example.
+> Requires TextBar 1.5.174 or later
+
+## Multi-line Scripts
+    echo 'Hello' ; echo 'World' ; echo '!'
+> Requires TextBar 1.5.174 or later
 
 ## HTML
 From v1.3.3, TextBar can render _basic_ HTML into your TextBar item. The text must begin with ```<html>```, or end with ```</html>``` - must be in lowercase! - for it to be renderred as HTML.
