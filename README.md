@@ -150,7 +150,7 @@ I'm working on a UI screen for preferences, but, until then you can set the Defa
 > Requires a restart of the TextBar app
 
 ### How to set the default Font-Size
-    defaults write com.RichSomerfield.TextBar textBarPreferences.DefaultFontSize -int 10
+    defaults write com.RichSomerfield.TextBar DefaultFontSize -int 10
 > Requires a restart of the TextBar app
 
 ### How to set the default Shell
