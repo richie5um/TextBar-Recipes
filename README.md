@@ -166,3 +166,18 @@ I'm working on a UI screen for preferences, but, until then you can set the Defa
 > Note: This is in points. Use '0' for unlimited.
 
 > Note: This only works on OS X Yosemite (10.10)
+
+### How to use your own images
+    defaults write com.RichSomerfield.TextBar DefaultAdditionalImagesFolder -string "/Users/rich/images/png"
+![AdditionalImages](Screenshots/AdditionalImages.png)
+> Requires TextBar v1.6.1 (or later)
+
+> Requires a restart of the TextBar app to read the folder
+
+> Note: Only loads 'png' files
+
+> Note: This will be moving to a new preferences UI when I get time to implement it
+
+To remove use:
+
+    defaults delete com.RichSomerfield.TextBar DefaultAdditionalImagesFolder
