@@ -184,18 +184,18 @@ To remove use:
 
 ### How to set the default TextBar image size
     defaults write com.RichSomerfield.TextBar DefaultImageSize -int 18
-> Requires TextBar v1.6.17 (or later)
+> Requires TextBar v1.6.19 (or later)
 
 > Requires a restart of the TextBar app
 
 ### How to set the default TextBar preferences image size
     defaults write com.RichSomerfield.TextBar DefaultMenuImageSize -int 18
-> Requires TextBar v1.6.17 (or later)
+> Requires TextBar v1.6.19 (or later)
 
 > Requires a restart of the TextBar app
 
 ### How to set the default TextBar notification image size
     defaults write com.RichSomerfield.TextBar DefaultNotificationImageSize -int 18
-> Requires TextBar v1.6.17 (or later)
+> Requires TextBar v1.6.19 (or later)
 
 > Requires a restart of the TextBar app
