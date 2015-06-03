@@ -75,6 +75,9 @@ Please submit pull-requests so that I can add your ideas/scripts.
 > Download git_status.sh to your machine (to ~/scripts), and then add this to TextBar.
 > Requires TextBar 1.5.174 or later
 
+### Unread Emails in AppleMail
+    osascript -e 'tell application "Mail" to get the unread count of inbox'
+
 ### Unread Emails in Outlook
     osascript $HOME/scripts/CheckOutlookMail.scpt
 > Download CheckOutlookMail.scpt to your machine (to ~/scripts), and then add this to TextBar.
