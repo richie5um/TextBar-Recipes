@@ -6,8 +6,9 @@ Recipes for TextBar app (www.richsomerfield.com/apps).
 ## Contributions
 Please submit pull-requests so that I can add your ideas/scripts.
 
-## Latest Features (New in 1.5.174)
+## Latest Major Features
 
+####  New in 1.5.174
 * ANSI escape coloring (see below for an example)
 * Multi-line scripts (see below for an example)
 
