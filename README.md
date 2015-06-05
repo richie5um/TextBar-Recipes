@@ -50,6 +50,13 @@ Please submit pull-requests so that I can add your ideas/scripts.
 > Download cpubar.sh to your machine (to ~/scripts), and then add this to TextBar. 
 > Requires TextBar 1.5.174 or later.
 
+### Show Mem 'graph'
+    $HOME/scripts/membar.sh
+
+> Download membar.sh to your machine (to ~/scripts), and then add this to TextBar.
+> Requires TextBar 1.5.174 or later.
+
+
 ### What song (and artist) is playing in iTunes?
     osascript -e 'if application "iTunes" is running then' -e 'tell application "iTunes"' -e 'if player state = playing then' -e '(get name of current track) & " – " & (get artist of current track)' -e 'else' -e 'return ""' -e 'end if' -e 'end tell' -e 'else' -e 'return ""' -e 'end if'
 > If iTunes is running and a song is playing, this will display the current song name and artist name.
