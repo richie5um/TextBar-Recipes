@@ -41,9 +41,9 @@ for VALUE in ${GET_USAGE[*]}; do
 	PERC_LIST+=(${PERC})
 done
 
-if [[ ${PERC_LIST[0]} -lt 40 ]]; then
+if [[ ${PERC_LIST[0]} -lt 70 ]]; then
 	OUT="\e[32m${BAR}"
-elif [[ ${PERC_LIST[0]} -lt 80 ]]; then
+elif [[ ${PERC_LIST[0]} -lt 90 ]]; then
 	OUT="\e[33m${BAR}"
 else
 	OUT="\e[31m${BAR}"
