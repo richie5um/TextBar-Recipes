@@ -65,3 +65,21 @@ RANGE=$((10-${SEQ}))
 for (( I=0; I < "${RANGE}"; I++ )); do
 	printf "\e[1;30m${BAR}"
 done
+
+# Include top 5 apps in textbar menu
+echo ''
+
+ps xmo rss=,pmem=,comm= | while read rss pmem comm; ((n++<5)); do
+
+    size="$[rss/1024]";
+    short=$[4-${#size}];
+    size="(${size}M)";
+    i=0;
+    while ((i++ < short)); do size=" $size"; done;
+
+    pmem="${pmem%%.*}"
+    color=$'\e[32m '
+
+    echo "$pmem% $size $(basename "$comm")"$'\e[0m'"";
+    #echo "$color$pmem% $size $(basename "$comm")"$'\e[0m'"";
+done
