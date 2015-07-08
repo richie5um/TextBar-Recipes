@@ -8,9 +8,8 @@ Please submit pull-requests so that I can add your ideas/scripts.
 
 ## Latest Major Features
 
-####  New in 1.5.174
-* ANSI escape coloring (see below for an example)
-* Multi-line scripts (see below for an example)
+####  New in 1.7.15
+* TextBar Actions
 
 ## Recipies
 
@@ -47,7 +46,7 @@ Please submit pull-requests so that I can add your ideas/scripts.
     $HOME/scripts/cpubar.sh
 
 ![CPUBar](Screenshots/CPUBar.png)
-> Download cpubar.sh to your machine (to ~/scripts), and then add this to TextBar. 
+> Download cpubar.sh to your machine (to ~/scripts), and then add this to TextBar.
 > Requires TextBar 1.5.174 or later.
 
 ### Show Mem 'graph'
@@ -210,3 +209,36 @@ To remove use:
 > Requires TextBar v1.6.19 (or later)
 
 > Requires a restart of the TextBar app
+
+## Actions
+Since v1.7.15, TextBar support custom actions. TextBar has, when you click on the text in the menubar, added the text to the clipboard. Now you can customize that behaviour to perform your own actions. Effectively you can build your own menu bar apps (i.e. app launcher, fav folder launcher, ...).
+
+### How To
+* Go to TextBar -> Preferences
+* Change the Action to 'Script'
+* Add your script
+
+### Details
+When your script runs, TextBar will pass two environment variables into the shell. These provide you with the index (i.e. position from 0...end in the menu list), and the actual text.
+
+The two environment variables are:
+
+* TEXTBAR_INDEX
+* TEXTBAR_TEXT
+
+### Basic Example
+* Add an action script of "echo $TEXTBAR_INDEX $TEXTBAR_TEXT > $HOME/output.txt"
+
+When you trigger this action, it'll send the index and text to the output.txt file.
+
+### Spotify Example
+* Download the following files:
+    * ShowSpotify.scpt
+    * SpotifyControl.scpt
+* Copy them to your ~/scripts folder
+* Configure a Textbar item to have a script of:
+    * osascript $HOME/scripts/ShowSpotify.scpt
+* Configure the Textbar item to have an action script of:
+    * osascript $HOME/scripts/SpotifyControl.scpt
+
+You should now be able to skip tracks and play/pause from the Textbar item.
