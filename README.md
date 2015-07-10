@@ -242,3 +242,15 @@ When you trigger this action, it'll send the index and text to the output.txt fi
     * osascript $HOME/scripts/SpotifyControl.scpt
 
 You should now be able to skip tracks and play/pause from the Textbar item.
+
+### Quick Finder Launcher Example
+* Create a new TextBar item with an image
+* Configure your script to be:
+    * echo "\nOpen"
+* Configure your action script to be:
+    * osascript -e 'tell application "Finder" to make new Finder window'
+
+This'll only show the image in the menubar, but the 'Open' action will be shown in the menu.
+![QuickLauncher](Screenshots/QuickLauncher.png)
+
+If you want to have more launcher items, then you'll need to create the action script to check for the TEXTBAR_INDEX environment variable value in your action script.
