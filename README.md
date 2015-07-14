@@ -254,3 +254,16 @@ This'll only show the image in the menubar, but the 'Open' action will be shown 
 ![QuickLauncher](Screenshots/QuickLauncher.png)
 
 If you want to have more launcher items, then you'll need to create the action script to check for the TEXTBAR_INDEX environment variable value in your action script.
+
+### iCloud Tabs
+* Download the following files:
+    * icloudtabs.scpt
+    * icloudtabsaction.scpt
+* Copy them to your ~/scripts folder
+* Create a new TextBar item
+* Configure a Textbar item to have a script of:
+    * echo 'Tabs' && python ~/scripts/icloudtabs.py
+* Configure the Textbar item to have an action script of:
+    * python ~/scripts/icloudtabsaction.py
+
+This'll show your iCloud tabs from your other devices - it omits the tabs from the local machine.
