@@ -55,7 +55,6 @@ Please submit pull-requests so that I can add your ideas/scripts.
 > Download membar.sh to your machine (to ~/scripts), and then add this to TextBar.
 > Requires TextBar 1.5.174 or later.
 
-
 ### What song (and artist) is playing in iTunes?
     osascript -e 'if application "iTunes" is running then' -e 'tell application "iTunes"' -e 'if player state = playing then' -e '(get name of current track) & " – " & (get artist of current track)' -e 'else' -e 'return ""' -e 'end if' -e 'end tell' -e 'else' -e 'return ""' -e 'end if'
 > If iTunes is running and a song is playing, this will display the current song name and artist name.
@@ -88,6 +87,13 @@ Please submit pull-requests so that I can add your ideas/scripts.
 ### Unread Emails in Outlook
     osascript $HOME/scripts/CheckOutlookMail.scpt
 > Download CheckOutlookMail.scpt to your machine (to ~/scripts), and then add this to TextBar.
+
+### Date of Latest Email in AppleMail
+    osascript $HOME/scripts/LatestEmail.scpt
+> Download LatestEmail.scpt to your machine (to ~/scripts), and then add this to TextBar.
+
+![LatestEmail](Screenshots/LatestEmail.png)
+
 
 ### Next Meeting in Outlook
     osascript $HOME/scripts/OutlookNextMeeting.scpt
