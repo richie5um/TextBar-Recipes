@@ -159,6 +159,10 @@ The HTML support is fairly limited, it supports text and images. The text can be
 ### Is my External drive mounted (with HTML Styled Text)?
     [ -d /Volumes/MyExtDrive ] && echo "<html><font face=\"helveticaneue-thin\"> MyExtDrive mounted</font></html>" || echo "<html><font face=\"helveticaneue-thin\">MyExtDrive <font color=red><b>not</b></font> mounted</font></html>"
 
+### Show Outdated Formulae in Homebrew
+    /usr/local/bin/brew update >/dev/null && /usr/local/bin/brew outdated | wc -l | awk '{print $1}' ; /usr/local/bin/brew outdated
+> This will show the number of outdated formulae in the menubar; clicking the item will show the list of items that are outdated. Update the path to `brew` to match your system.
+
 ## Preferences
 > Requires TextBar v1.4.9 (or later)
 
