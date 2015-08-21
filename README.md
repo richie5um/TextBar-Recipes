@@ -14,7 +14,7 @@ Please submit pull-requests so that I can add your ideas/scripts.
 ## Recipies
 
 ### Remind me to sit/stand
-    test -f /tmp/stand && { echo "Stand" && rm /tmp/stand } || { echo 'Sit' && touch /tmp/stand }
+    test -f /tmp/stand && { echo "Stand" && rm /tmp/stand } || { echo "Sit" && touch /tmp/stand }
 
 ### What is my Local IP address?
     ifconfig | grep inet | grep -v inet6 | cut -d" " -f2 | tail -n1
