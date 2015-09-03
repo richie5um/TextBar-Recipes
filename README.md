@@ -18,6 +18,9 @@ Please submit pull-requests so that I can add your ideas/scripts.
 ### What is my external IP address?
     curl http://ipinfo.io/ip
 
+### What is my latency to Google's DNS Servers?
+    ping -c 1 8.8.8.8 | awk -F" |=" '/time/{print $10"ms"}'
+
 ### How much disk space am I using?
     df / | awk '{ print $5 }' | tail -n 1
 
