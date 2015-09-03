@@ -1,15 +1,14 @@
 # TextBar-Recipes
 
 ## What?
-Recipes for TextBar app (www.richsomerfield.com/apps).
+Recipes for TextBar app [www.richsomerfield.com/apps](http://www.richsomerfield.com/apps).
 
 ## Contributions
 Please submit pull-requests so that I can add your ideas/scripts.
 
 ## Latest Major Features
 
-####  New in 1.7.15
-* TextBar Actions
+[Release Notes](http://www.richsomerfield.com/apps/textbar/releasenotes_textbar.html)
 
 ## Recipies
 
@@ -94,7 +93,6 @@ Please submit pull-requests so that I can add your ideas/scripts.
 
 ![LatestEmail](Screenshots/LatestEmail.png)
 
-
 ### Next Meeting in Outlook
     osascript $HOME/scripts/OutlookNextMeeting.scpt
 > Download OutlookNextMeeting.scpt to your machine (to ~/scripts), and then add this to TextBar.
@@ -155,6 +153,10 @@ The HTML support is fairly limited, it supports text and images. The text can be
 
 ### Is my External drive mounted (with HTML Styled Text)?
     [ -d /Volumes/MyExtDrive ] && echo "<html><font face=\"helveticaneue-thin\"> MyExtDrive mounted</font></html>" || echo "<html><font face=\"helveticaneue-thin\">MyExtDrive <font color=red><b>not</b></font> mounted</font></html>"
+
+### Show last 10 (ish) files backed-up by CrashPlan
+    $HOME/scripts/CrashPlan.sh
+> Download CrashPlan.sh to your machine (to ~/scripts). and then add this to TextBar.
 
 ## Preferences
 > Requires TextBar v1.4.9 (or later)
