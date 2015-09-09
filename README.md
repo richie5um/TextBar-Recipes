@@ -129,6 +129,14 @@ Please submit pull-requests so that I can add your ideas/scripts.
     osascript $HOME/scripts/SelectedFinderFile.scpt
 > Download SelectedFinderFile.scpt to your machine (to ~/scripts), and then add this to TextBar.
 
+### Show Outdated Formulae in Homebrew
+    /usr/local/bin/brew update >/dev/null && /usr/local/bin/brew outdated | wc -l | awk '{print $1}' ; /usr/local/bin/brew outdated
+> This will show the number of outdated formulae in the menubar; clicking the item will show the list of items that are outdated. Update the path to `brew` to match your system.
+
+### Remind me to sit/stand
+    test -f $HOME/tmp/stand && { echo "Stand" && rm $HOME/tmp/stand } || { echo "Sit" && touch $HOME/tmp/stand }
+> Configure with whatever refresh frequency you want - in TextBar Preferences.
+
 ## ANSI Escape Colors
     echo 'Normal \e[41m Other '
 > This is an example.
