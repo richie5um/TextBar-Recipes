@@ -87,6 +87,12 @@ Please submit pull-requests so that I can add your ideas/scripts.
 > Download git_status.sh to your machine (to ~/scripts), and then add this to TextBar.
 > Requires TextBar 1.5.174 or later
 
+### Get Current ControlPlan context
+    osascript -e 'tell application "ControlPlane" to get the current context' | sed -e 's: + ::g'
+
+![ControlPlaneContext](Screenshots/ControlPlaneContext.png)
+> I also remove the + between the contexts to save space (TextBar green, ControlPlane red).
+
 ### Unread Emails in AppleMail
     osascript -e 'tell application "Mail" to get the unread count of inbox'
 
