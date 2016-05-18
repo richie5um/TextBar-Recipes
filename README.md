@@ -38,6 +38,14 @@ Please submit pull-requests so that I can add your ideas/scripts.
     echo '😀'
 > Easiest way to see other emoji is; Open TextEdit, then "Edit > Emoji & Symbols". Then just copy and paste into TextBar.
 
+### Colored text
+    if [ $((`date +"%S"`%2)) -eq 0 ]; then echo "\e[41mHot donuts now"; else echo "\e[42mHot donuts now"; fi
+> [MPU 321 - 58mins](https://www.relay.fm/mpu/321)
+
+> Set the refresh to 1 secs for flashing text.
+
+![Hot Donuts](Screenshots/HotDonutsNow.png)
+
 ### What is my battery charge?
     ioreg -n AppleSmartBattery -r | awk '$1~/Capacity/{c[$1]=$3} END{OFMT="%.2f%%"; max=c["\"MaxCapacity\""]; print (max>0? 100*c["\"CurrentCapacity\""]/max: "?")}'
 
