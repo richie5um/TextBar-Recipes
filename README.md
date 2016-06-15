@@ -139,6 +139,12 @@ Please submit pull-requests so that I can add your ideas/scripts.
     json=$(curl -s http://stackoverflow.com/users/flair/22656.json) && echo $json | sed 's/,//g;s/^.*reputation...\([0-9]*\).*$/\1/'
 > (replace 22656 by your SO account number)
 
+### VirtualBox
+    $HOME/scripts/vbox.sh
+> Download vbox.sh to your machine (to ~/scripts), and then add this to TextBar.
+> Also, download vbox_run.sh to your machine (to ~/scripts) and add the action for this item to be $HOME/scripts/vbox_run.sh. Then, when you click on the machine, it'll start it.
+> Many thanks to SteffenK!
+
 ### Vagrant
     VBoxManage list runningvms | egrep -oh '[a-z]+_default' | awk -F'_' '{print $1}' | paste -s -d", " -
 > Show all currently running vagrant boxes (VirtualBox only)
