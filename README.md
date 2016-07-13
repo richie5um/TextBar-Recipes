@@ -135,6 +135,18 @@ Please submit pull-requests so that I can add your ideas/scripts.
 ![Battery](Screenshots/MouseKeyboardBattery.png)
 > Add these as two separate items.
 
+### WhatPulse keys press
+
+[WhatPulse](http://whatpulse.org/) is a keyboard and mouse statistics generater.
+
+Keys pressed in the last hour:
+
+    printf "%'.0f\n" $(echo '' | sqlite3 ~/Library/Application\ Support/whatpulse/whatpulse.db -cmd "select count from keypresses where day = DATE('now') and hour = strftime('%H',TIME('now','localtime'));" -batch)
+
+Key pressed today:
+
+    printf "%'.0f\n" $(echo '' | sqlite3 ~/Library/Application\ Support/whatpulse/whatpulse.db -cmd "select sum("count") from keypresses where day = date();" -batch)
+
 ### Stackoverflow Reputation
     json=$(curl -s http://stackoverflow.com/users/flair/22656.json) && echo $json | sed 's/,//g;s/^.*reputation...\([0-9]*\).*$/\1/'
 > (replace 22656 by your SO account number)
