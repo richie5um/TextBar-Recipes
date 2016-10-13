@@ -10,6 +10,21 @@ Please submit pull-requests so that I can add your ideas/scripts.
 
 [Release Notes](http://www.richsomerfield.com/apps/textbar/releasenotes_textbar.html)
 
+## Troubleshooting
+
+If you encounter problems with TextBar, you can enable logging. How to:
+* Run 'defaults write com.RichSomerfield.TextBar ScriptLogging -bool true'
+* Restart TextBar app
+* Open the macOS Console app, and use 'TextBar' filter
+
+![ConsoleApp](Screenshots/ConsoleApp.png)
+
+> Note: You can ignore the messages for "Remove Temp: Error Domain...". They will be removed in a future version.
+
+To disable the extended logging:
+* Run 'defaults delete com.RichSomerfield.TextBar ScriptLogging'
+* Restart TextBar app
+
 ## Recipies
 
 ### What is my Local IP address?
