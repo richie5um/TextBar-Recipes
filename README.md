@@ -218,7 +218,12 @@ The HTML support is fairly limited, it supports text and images. The text can be
 
 ### Show last 10 (ish) files backed-up by CrashPlan
     $HOME/scripts/CrashPlan.sh
-> Download CrashPlan.sh to your machine (to ~/scripts). and then add this to TextBar.
+> Download CrashPlan.sh to your machine (to ~/scripts), and then add this to TextBar.
+
+### Show macOS Desktop Space Number
+    $HOME/scripts/SpaceNumber.sh
+> Requires you to name your wallpapers for each space - see notes in the script for more details. Download SpaceNumber.sh to your machine (to ~/scripts). and then add this to TextBar.
+
 
 ## Preferences
 > Requires TextBar v1.4.9 (or later)
