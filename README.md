@@ -33,6 +33,9 @@ To disable the extended logging:
 ### What is my external IP address?
     curl http://ipinfo.io/ip
 
+### What is my (approximate) location?
+    curl http://freegeoip.net/csv/ | awk -F',' '{print $6}'
+
 ### What is my latency to Google's DNS Servers?
     ping -c 1 8.8.8.8 | awk -F" |=" '/time/{print $10"ms"}'
 
