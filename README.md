@@ -27,6 +27,9 @@ To disable the extended logging:
 
 ## Recipies
 
+### Remind me to sit/stand
+    test -f /tmp/stand && { echo "Stand" && rm /tmp/stand } || { echo "Sit" && touch /tmp/stand }
+
 ### What is my Local IP address?
     ifconfig | grep inet | grep -v inet6 | cut -d" " -f2 | tail -n1
 
