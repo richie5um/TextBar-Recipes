@@ -10,139 +10,6 @@ Please submit pull-requests so that I can add your ideas/scripts.
 
 [Release Notes](http://www.richsomerfield.com/apps/textbar/releasenotes_textbar.html)
 
-## Troubleshooting
-
-If you encounter problems with TextBar, you can enable logging. How to:
-* Run 'defaults write com.RichSomerfield.TextBar ScriptLogging -bool true'
-* Restart TextBar app
-* Open the macOS Console app, and use 'TextBar' filter
-
-![ConsoleApp](Screenshots/ConsoleApp.png)
-
-To disable the extended logging:
-* Run 'defaults delete com.RichSomerfield.TextBar ScriptLogging'
-* Restart TextBar app
-
-## New for TextBar v2
-
-### TextBar Live
-
-[https://app.textbar.co](https://app.textbar.co)
-
-> Do you have multiple Mac computers? Do you have remote or headless Mac servers? If so, then TextBar Live could be for you. TextBar Live allows you to see the status of all of your TextBar items, from all of your Macs, in a single place on the web.
-
-**Note:** TextBar Live requires a monthly subscription.
-
-* Register on [https://app.textbar.co](https://app.textbar.co)
-* Create a subscription - note: the first 100 users get a free 1 device subscription.
-
-* In TextBar Mac app > Preferences > Live:
-    * Set your API Token - from [https://app.textbar.co/#/account](https://app.textbar.co/#/account)
-    * And then enable
-
-![TextBar Live](Screenshots/TextBarLive.png)
-
-* View your TextBar items on the web:
-
-![TextBar Live Items](Screenshots/TextBarLiveItems.png)
-
-### Dynamic Values
-
-Some of the TextBar values can be overriden from your script - so you can change them dynamically.
-
-The dynamic section is identified by returning `----TEXTBAR----` in your script.
-
-#### Dynamic Refresh
-
-This script will override the refresh configured for this item (in TextBar preferences) with 5 secs.
-
-    #!/bin/bash
-    date
-    echo "----TEXTBAR----"
-    echo "REFRESH=5"
-
-
-#### Dynamic Image
-
-This script will override the image configured for this item (in TextBar preferences).
-
-    #!/bin/bash
-    echo "Dynamic Image"
-    echo "----TEXTBAR----"
-    echo "IMAGE=_no_image-32"
-
-The bundled images are stored in `/Applications/TextBar.app/Contents/Resources` (use 'Show Package Contents' to navigate into the app in Finder).
-
-    #!/bin/bash
-    echo "Dynamic Image"
-    echo "----TEXTBAR----"
-    echo "IMAGE=coffee-32"
-
-Prefix the image name with a ':' to load an image from a location on your machine.
-
-    #!/bin/bash
-    echo "Dynamic Image"
-    echo "----TEXTBAR----"
-    echo "IMAGE=:$HOME/Pictures/RichS.jpeg"
-
-#### HTML View
-
-Show HTML in the TextBar view. For example (this is the output of the script):
-
-    Display HTML
-    <html>
-        <head>
-            <style>
-                body {
-                    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-                    font-weight: 300;
-                    background-color: #3B9AD9;
-                    color: #ffffff;
-                }
-            </style>
-        </head>
-        <body>
-            <h1>Hello from TextBar v2</h1>
-        </body>
-    </html>
-    ----TEXTBAR----
-    VIEWTYPE=HTML
-
-**Note:** You can also specify the ViewSize of the view.
-
-
-    Display HTML
-    <html>
-        ...
-    </html>
-    ----TEXTBAR----
-    REFRESH=10
-    VIEWTYPE=HTML
-    VIEWSIZE=600,400
-
-![HTML View](Screenshots/HTMLView.png)
-
-#### URL View
-
-Show a webpage in the TextBar view.
-
-    #!/bin/bash
-    echo "Display URL"
-    echo "https://www.apple.com"
-    echo "----TEXTBAR----"
-    echo "VIEWTYPE=URL"
-    echo "VIEWSIZE=$(( ( RANDOM % 200 ) + 500 )),$(( ( RANDOM % 200 ) + 300 ))"
-
-**Note:** You can also specify the ViewSize of the view. This script creates a random sized view to demonstrate dynamic refresh too :-).
-
-![URL View](Screenshots/URLView.png)
-
-### Last Update
-All TextBar items show the last updated time in the menu.
-
-![Last Update](Screenshots/UpdatedAt.png)
-
-
 ## Recipies
 
 ### What is my Local IP address?
@@ -151,15 +18,8 @@ All TextBar items show the last updated time in the menu.
 ### What is my external IP address?
     curl http://ipinfo.io/ip
 
-### What is my (approximate) location?
-    curl http://freegeoip.net/csv/ | awk -F',' '{print $6}'
-
 ### What is my latency to Google's DNS Servers?
     ping -c 1 8.8.8.8 | awk -F" |=" '/time/{print $10"ms"}'
-
-### Display Ping Time to a Specified Server
-    $HOME/scripts/pingTime.sh google.com
-> Download pingTime.sh to your machine (to ~/scripts), and then add this to TextBar.
 
 ### How much disk space am I using?
     df / | awk '{ print $5 }' | tail -n 1
@@ -173,14 +33,6 @@ All TextBar items show the last updated time in the menu.
 ### Smiley
     echo '😀'
 > Easiest way to see other emoji is; Open TextEdit, then "Edit > Emoji & Symbols". Then just copy and paste into TextBar.
-
-### Colored text
-    if [ $((`date +"%S"`%2)) -eq 0 ]; then echo "\e[41mHot donuts now"; else echo "\e[42mHot donuts now"; fi
-> [MPU 321 - 58mins](https://www.relay.fm/mpu/321)
-
-> Set the refresh to 1 secs for flashing text.
-
-![Hot Donuts](Screenshots/HotDonutsNow.png)
 
 ### What is my battery charge?
     ioreg -n AppleSmartBattery -r | awk '$1~/Capacity/{c[$1]=$3} END{OFMT="%.2f%%"; max=c["\"MaxCapacity\""]; print (max>0? 100*c["\"CurrentCapacity\""]/max: "?")}'
@@ -231,12 +83,6 @@ All TextBar items show the last updated time in the menu.
 > Download git_status.sh to your machine (to ~/scripts), and then add this to TextBar.
 > Requires TextBar 1.5.174 or later
 
-### Get Current ControlPlan context
-    osascript -e 'tell application "ControlPlane" to get the current context' | sed -e 's: + ::g'
-
-![ControlPlaneContext](Screenshots/ControlPlaneContext.png)
-> I also remove the + between the contexts to save space (TextBar green, ControlPlane red).
-
 ### Unread Emails in AppleMail
     osascript -e 'tell application "Mail" to get the unread count of inbox'
 
@@ -271,27 +117,9 @@ All TextBar items show the last updated time in the menu.
 ![Battery](Screenshots/MouseKeyboardBattery.png)
 > Add these as two separate items.
 
-### WhatPulse keys press
-
-[WhatPulse](http://whatpulse.org/) is a keyboard and mouse statistics generater.
-
-Keys pressed in the last hour:
-
-    printf "%'.0f\n" $(echo '' | sqlite3 ~/Library/Application\ Support/whatpulse/whatpulse.db -cmd "select count from keypresses where day = DATE('now') and hour = strftime('%H',TIME('now','localtime'));" -batch)
-
-Key pressed today:
-
-    printf "%'.0f\n" $(echo '' | sqlite3 ~/Library/Application\ Support/whatpulse/whatpulse.db -cmd "select sum("count") from keypresses where day = date();" -batch)
-
 ### Stackoverflow Reputation
     json=$(curl -s http://stackoverflow.com/users/flair/22656.json) && echo $json | sed 's/,//g;s/^.*reputation...\([0-9]*\).*$/\1/'
 > (replace 22656 by your SO account number)
-
-### VirtualBox
-    $HOME/scripts/vbox.sh
-> Download vbox.sh to your machine (to ~/scripts), and then add this to TextBar.
-> Also, download vbox_run.sh to your machine (to ~/scripts) and add the action for this item to be $HOME/scripts/vbox_run.sh. Then, when you click on the machine, it'll start it.
-> Many thanks to SteffenK!
 
 ### Vagrant
     VBoxManage list runningvms | egrep -oh '[a-z]+_default' | awk -F'_' '{print $1}' | paste -s -d", " -
@@ -300,14 +128,6 @@ Key pressed today:
 ### Show Selected File in Finder
     osascript $HOME/scripts/SelectedFinderFile.scpt
 > Download SelectedFinderFile.scpt to your machine (to ~/scripts), and then add this to TextBar.
-
-### Show Outdated Formulae in Homebrew
-    /usr/local/bin/brew update >/dev/null && /usr/local/bin/brew outdated | wc -l | awk '{print $1}' ; /usr/local/bin/brew outdated
-> This will show the number of outdated formulae in the menubar; clicking the item will show the list of items that are outdated. Update the path to `brew` to match your system.
-
-### Remind me to sit/stand
-    test -f $HOME/tmp/stand && { echo "Stand" && rm $HOME/tmp/stand } || { echo "Sit" && touch $HOME/tmp/stand }
-> Configure with whatever refresh frequency you want - in TextBar Preferences.
 
 ## ANSI Escape Colors
     echo 'Normal \e[41m Other '
@@ -337,14 +157,15 @@ The HTML support is fairly limited, it supports text and images. The text can be
 ### Is my External drive mounted (with HTML Styled Text)?
     [ -d /Volumes/MyExtDrive ] && echo "<html><font face=\"helveticaneue-thin\"> MyExtDrive mounted</font></html>" || echo "<html><font face=\"helveticaneue-thin\">MyExtDrive <font color=red><b>not</b></font> mounted</font></html>"
 
+<<<<<<< HEAD
 ### Show last 10 (ish) files backed-up by CrashPlan
     $HOME/scripts/CrashPlan.sh
-> Download CrashPlan.sh to your machine (to ~/scripts), and then add this to TextBar.
-
-### Show macOS Desktop Space Number
-    $HOME/scripts/SpaceNumber.sh
-> Requires you to name your wallpapers for each space - see notes in the script for more details. Download SpaceNumber.sh to your machine (to ~/scripts). and then add this to TextBar.
-
+> Download CrashPlan.sh to your machine (to ~/scripts). and then add this to TextBar.
+=======
+### Show Outdated Formulae in Homebrew
+    /usr/local/bin/brew update >/dev/null && /usr/local/bin/brew outdated | wc -l | awk '{print $1}' ; /usr/local/bin/brew outdated
+> This will show the number of outdated formulae in the menubar; clicking the item will show the list of items that are outdated. Update the path to `brew` to match your system.
+>>>>>>> d41ddf7b772f9eb2c2079b430d89239112e6cf0e
 
 ## Preferences
 > Requires TextBar v1.4.9 (or later)
@@ -372,11 +193,6 @@ I'm working on a UI screen for preferences, but, until then you can set the Defa
 > Note: This is in points. Use '0' for unlimited.
 
 > Note: This only works on OS X Yosemite (10.10)
-
-### How to enable more default images
-    defaults write com.RichSomerfield.TextBar DefaultAllImages -bool YES
-
-> Requires a restart of the TextBar app to read the folder
 
 ### How to use your own images
     defaults write com.RichSomerfield.TextBar DefaultAdditionalImagesFolder -string "/Users/rich/images/png"
