@@ -23,7 +23,17 @@ To disable the extended logging:
 * Run 'defaults delete com.RichSomerfield.TextBar ScriptLogging'
 * Restart TextBar app
 
+----
+
 ## New for TextBar v2
+
+TextBar Mac licenses work with either v1 or v2 - there is **no** upgrade fee for v2.
+
+TextBar v2 repesents a huge amount of work. If you would like to donate that would be very much appreciated.
+
+**Donate:** [paypal.me/richie5um](https://www.paypal.me/richie5um)
+
+Here are the major new items for v2...
 
 ### TextBar Live
 
