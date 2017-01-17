@@ -153,7 +153,7 @@ All TextBar items show the last updated time in the menu.
 ![Last Update](Screenshots/UpdatedAt.png)
 
 
-## Recipies
+## Recipes
 
 ### What is my Local IP address?
     ifconfig | grep inet | grep -v inet6 | cut -d" " -f2 | tail -n1
