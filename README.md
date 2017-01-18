@@ -152,7 +152,6 @@ All TextBar items show the last updated time in the menu.
 
 ![Last Update](Screenshots/UpdatedAt.png)
 
-
 ## Recipies
 
 ### What is my Local IP address?
@@ -160,6 +159,15 @@ All TextBar items show the last updated time in the menu.
 
 ### What is my external IP address?
     curl http://ipinfo.io/ip
+
+### What SSID is being used for en0
+    $HOME/scripts/ssid.sh
+
+###### [Download Script](ssid.sh)
+
+![WiFi Off](Screenshots/WiFiOff.png)
+> Requires TextBar 2.0.362 or later.
+> This is much better than the SSID command that comes by default in TextBar.
 
 ### What is my (approximate) location?
     curl http://freegeoip.net/csv/ | awk -F',' '{print $6}'
@@ -197,6 +205,9 @@ All TextBar items show the last updated time in the menu.
 
 ### Show CPU 'graph'
     $HOME/scripts/CPUSpeed.sh
+
+###### [Download Script](CPUSpeed.sh)
+
 > Download CPUSpeed.sh to your machine (to ~/scripts), and then add this to TextBar.
 > Note: This is fairly basic. It is very slow to use ```top``` to calculate the CPU, but, I've not come across a better way yet.
 
@@ -205,12 +216,16 @@ All TextBar items show the last updated time in the menu.
 ### Show CPU 'graph' - version 2
     $HOME/scripts/cpubar.sh
 
+###### [Download Script](cpubar.sh)
+
 ![CPUBar](Screenshots/CPUBar.png)
 > Download cpubar.sh to your machine (to ~/scripts), and then add this to TextBar.
 > Requires TextBar 1.5.174 or later.
 
 ### Show Mem 'graph'
     $HOME/scripts/membar.sh
+
+###### [Download Script](membar.sh)
 
 > Download membar.sh to your machine (to ~/scripts), and then add this to TextBar.
 > Requires TextBar 1.5.174 or later.
@@ -252,16 +267,25 @@ All TextBar items show the last updated time in the menu.
 
 ### Unread Emails in Outlook
     osascript $HOME/scripts/CheckOutlookMail.scpt
+
+###### [Download Script](CheckOutlookMail.scpt)
+
 > Download CheckOutlookMail.scpt to your machine (to ~/scripts), and then add this to TextBar.
 
 ### Date of Latest Email in AppleMail
     osascript $HOME/scripts/LatestEmail.scpt
+
+###### [Download Script](LatestEmail.scpt)
+
 > Download LatestEmail.scpt to your machine (to ~/scripts), and then add this to TextBar.
 
 ![LatestEmail](Screenshots/LatestEmail.png)
 
 ### Next Meeting in Outlook
     osascript $HOME/scripts/OutlookNextMeeting.scpt
+
+###### [Download Script](OutlookNextMeeting.scpt)
+
 > Download OutlookNextMeeting.scpt to your machine (to ~/scripts), and then add this to TextBar.
 > Edit OutlookNextMeeting.scpt if you want the text formatted differently.
 > Note: This only looks 60 mins into the future. You can edit OutlookNextMeeting.scpt if you want longer.
@@ -299,6 +323,9 @@ Key pressed today:
 
 ### VirtualBox
     $HOME/scripts/vbox.sh
+
+###### [Download Script](vbox.sh)
+
 > Download vbox.sh to your machine (to ~/scripts), and then add this to TextBar.
 > Also, download vbox_run.sh to your machine (to ~/scripts) and add the action for this item to be $HOME/scripts/vbox_run.sh. Then, when you click on the machine, it'll start it.
 > Many thanks to SteffenK!
@@ -309,6 +336,9 @@ Key pressed today:
 
 ### Show Selected File in Finder
     osascript $HOME/scripts/SelectedFinderFile.scpt
+
+###### [Download Script](SelectedFinderFile.scpt)
+
 > Download SelectedFinderFile.scpt to your machine (to ~/scripts), and then add this to TextBar.
 
 ### Show Outdated Formulae in Homebrew
@@ -342,6 +372,7 @@ The HTML support is fairly limited, it supports text and images. The text can be
 
 ### CSS Styled Text
     cat '$HOME/scripts/apple.html'
+
 > Download apple.html to your machine (to ~/scripts), and then add this to TextBar.
 
 ### Is my External drive mounted (with HTML Styled Text)?
@@ -349,10 +380,16 @@ The HTML support is fairly limited, it supports text and images. The text can be
 
 ### Show last 10 (ish) files backed-up by CrashPlan
     $HOME/scripts/CrashPlan.sh
+
+###### [Download Script](CrashPlan.sh)
+
 > Download CrashPlan.sh to your machine (to ~/scripts), and then add this to TextBar.
 
 ### Show macOS Desktop Space Number
     $HOME/scripts/SpaceNumber.sh
+
+###### [Download Script](SpaceNumber.sh)
+
 > Requires you to name your wallpapers for each space - see notes in the script for more details. Download SpaceNumber.sh to your machine (to ~/scripts). and then add this to TextBar.
 
 
