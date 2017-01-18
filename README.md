@@ -163,7 +163,7 @@ All TextBar items show the last updated time in the menu.
 ### What SSID is being used for en0
     $HOME/scripts/ssid.sh
 
-###### [Download Script](ssid.sh)
+###### [Download Script](Scripts/ssid.sh)
 
 ![WiFi Off](Screenshots/WiFiOff.png)
 > Requires TextBar 2.0.362 or later.
@@ -206,7 +206,7 @@ All TextBar items show the last updated time in the menu.
 ### Show CPU 'graph'
     $HOME/scripts/CPUSpeed.sh
 
-###### [Download Script](CPUSpeed.sh)
+###### [Download Script](Scripts/CPUSpeed.sh)
 
 > Download CPUSpeed.sh to your machine (to ~/scripts), and then add this to TextBar.
 > Note: This is fairly basic. It is very slow to use ```top``` to calculate the CPU, but, I've not come across a better way yet.
@@ -216,7 +216,7 @@ All TextBar items show the last updated time in the menu.
 ### Show CPU 'graph' - version 2
     $HOME/scripts/cpubar.sh
 
-###### [Download Script](cpubar.sh)
+###### [Download Script](Scripts/cpubar.sh)
 
 ![CPUBar](Screenshots/CPUBar.png)
 > Download cpubar.sh to your machine (to ~/scripts), and then add this to TextBar.
@@ -225,7 +225,7 @@ All TextBar items show the last updated time in the menu.
 ### Show Mem 'graph'
     $HOME/scripts/membar.sh
 
-###### [Download Script](membar.sh)
+###### [Download Script](Scripts/membar.sh)
 
 > Download membar.sh to your machine (to ~/scripts), and then add this to TextBar.
 > Requires TextBar 1.5.174 or later.
@@ -268,14 +268,14 @@ All TextBar items show the last updated time in the menu.
 ### Unread Emails in Outlook
     osascript $HOME/scripts/CheckOutlookMail.scpt
 
-###### [Download Script](CheckOutlookMail.scpt)
+###### [Download Script](Scripts/CheckOutlookMail.scpt)
 
 > Download CheckOutlookMail.scpt to your machine (to ~/scripts), and then add this to TextBar.
 
 ### Date of Latest Email in AppleMail
     osascript $HOME/scripts/LatestEmail.scpt
 
-###### [Download Script](LatestEmail.scpt)
+###### [Download Script](Scripts/LatestEmail.scpt)
 
 > Download LatestEmail.scpt to your machine (to ~/scripts), and then add this to TextBar.
 
@@ -284,7 +284,7 @@ All TextBar items show the last updated time in the menu.
 ### Next Meeting in Outlook
     osascript $HOME/scripts/OutlookNextMeeting.scpt
 
-###### [Download Script](OutlookNextMeeting.scpt)
+###### [Download Script](Scripts/OutlookNextMeeting.scpt)
 
 > Download OutlookNextMeeting.scpt to your machine (to ~/scripts), and then add this to TextBar.
 > Edit OutlookNextMeeting.scpt if you want the text formatted differently.
@@ -324,7 +324,7 @@ Key pressed today:
 ### VirtualBox
     $HOME/scripts/vbox.sh
 
-###### [Download Script](vbox.sh)
+###### [Download Script](Scripts/vbox.sh)
 
 > Download vbox.sh to your machine (to ~/scripts), and then add this to TextBar.
 > Also, download vbox_run.sh to your machine (to ~/scripts) and add the action for this item to be $HOME/scripts/vbox_run.sh. Then, when you click on the machine, it'll start it.
@@ -337,7 +337,7 @@ Key pressed today:
 ### Show Selected File in Finder
     osascript $HOME/scripts/SelectedFinderFile.scpt
 
-###### [Download Script](SelectedFinderFile.scpt)
+###### [Download Script](Scripts/SelectedFinderFile.scpt)
 
 > Download SelectedFinderFile.scpt to your machine (to ~/scripts), and then add this to TextBar.
 
@@ -381,14 +381,14 @@ The HTML support is fairly limited, it supports text and images. The text can be
 ### Show last 10 (ish) files backed-up by CrashPlan
     $HOME/scripts/CrashPlan.sh
 
-###### [Download Script](CrashPlan.sh)
+###### [Download Script](Scripts/CrashPlan.sh)
 
 > Download CrashPlan.sh to your machine (to ~/scripts), and then add this to TextBar.
 
 ### Show macOS Desktop Space Number
     $HOME/scripts/SpaceNumber.sh
 
-###### [Download Script](SpaceNumber.sh)
+###### [Download Script](Scripts/SpaceNumber.sh)
 
 > Requires you to name your wallpapers for each space - see notes in the script for more details. Download SpaceNumber.sh to your machine (to ~/scripts). and then add this to TextBar.
 
