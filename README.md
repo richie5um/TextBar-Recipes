@@ -188,6 +188,13 @@ All TextBar items show the last updated time in the menu.
 ### Is my website running?
     ALIVE=\`curl -Is www.google.com | grep -q "200 OK"\` && echo "Google Alive" || echo "Google Dead"
 
+### Site Status - determine if multiple websites are running
+	$HOME/scripts/SiteStatus.sh 
+> Download SiteStatus.sh to your machine (to ~/scripts), and then add this to TextBar.	Read the script as you need to create a directory and file to list websites.
+> ###### [Download Script](Scripts/SiteStatus.sh)
+
+![SiteStatus](Screenshots/SiteStatus.png)
+
 ### Smiley
     echo '😀'
 > Easiest way to see other emoji is; Open TextEdit, then "Edit > Emoji & Symbols". Then just copy and paste into TextBar.
