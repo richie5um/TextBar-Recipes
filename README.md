@@ -270,7 +270,7 @@ All TextBar items show the last updated time in the menu.
 > I also remove the + between the contexts to save space (TextBar green, ControlPlane red).
 
 ### Unread Emails in AppleMail
-    osascript -e 'tell application "Mail" to get the unread count of inbox'
+    if [[ $(pgrep Mail) ]]; then osascript -e 'tell application "Mail" to get the unread count of inbox'; else echo "N/A"; fi
 
 ### Unread Emails in Outlook
     osascript $HOME/scripts/CheckOutlookMail.scpt
