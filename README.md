@@ -45,9 +45,13 @@ Complete re-written Preferences UI to make to easier to add and edit TextBar Ite
 
 Use the new _Export_ button to save and share TextBar items with other TextBar users!
 
+![TextBar Export](Screenshots/v3-export.png)
+
 > I'm hoping to create a TextBar Items webpage at some point, for now email them to me or create a PullRequest and I'll add them to this page.
 
 Note: The Export mechanism tries to detect if the script is a file. If it is, it'll automatically include the contents of the file. Otherwise it'll require any used files to be available on the other system. If in doubt, use the new file picker to select a script file - this will work with the new export mechanism.
+
+The old Import/Export mechanism is still available for backups of your configured TextBar Items, but this does not include any file contents. It is intended for personal backups only.
 
 ### Shortcut to Refresh
 
