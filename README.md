@@ -25,13 +25,45 @@ To disable the extended logging:
 
 ----
 
-## New for TextBar v2
+## New for TextBar v3
 
-TextBar Mac licenses work with either v1 or v2 - there is **no** upgrade fee for v2.
+TextBar Mac licenses work with either v1, v2 and v3 - there is **no** upgrade fee for v3.
 
-TextBar v2 repesents a huge amount of work. If you would like to donate that would be very much appreciated.
+TextBar v3 repesents a huge amount of work. If you would like to donate that would be very much appreciated.
 
 **Donate:** [paypal.me/richie5um](https://www.paypal.me/richie5um)
+
+Here are the major new items for v3...
+
+### New Preferences UI
+
+Complete re-written Preferences UI to make to easier to add and edit TextBar Items.
+
+![TextBar Preferences](Screenshots/v3-textbar.png)
+
+### Share TextBar Items
+
+Use the new _Export_ button to save and share TextBar items with other TextBar users!
+
+> I'm hoping to create a TextBar Items webpage at some point, for now email them to me or create a PullRequest and I'll add them to this page.
+
+Note: The Export mechanism tries to detect if the script is a file. If it is, it'll automatically include the contents of the file. Otherwise it'll require any used files to be available on the other system. If in doubt, use the new file picker to select a script file - this will work with the new export mechanism.
+
+### Shortcut to Refresh
+
+You can now assign a shortcut key to a TextBar Item so you can quick refresh it. You could use use this as a simple script runner :-). 
+
+### Drag and Drop Images
+
+Drag and Drop an image file onto the new preferences _image_ area to use your own image for your TextBar item.
+
+![TextBar Image Drag Drop](Screenshots/v3-dragdrop.png)
+
+### And numerous other fixes and improvements
+
+----
+
+## New for TextBar v2
 
 Here are the major new items for v2...
 
