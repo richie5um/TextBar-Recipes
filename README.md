@@ -287,6 +287,7 @@ All TextBar items show the last updated time in the menu.
 ![Weather](Screenshots/Weather.png)
 > Don't refresh too frequently as this service is rate limited.
 > You'll need to change "Manchester,UK" to your location, unless you actually live in Manchester :-).
+> Note: An API key is required.
 
 ### Unicode Weather
     curl weather.mar.cx/Manchester,_UK | grep "<title>" | cut -d'>' -f2 | cut -d' ' -f1
