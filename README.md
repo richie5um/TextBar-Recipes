@@ -6,32 +6,25 @@ Recipes for TextBar app [www.richsomerfield.com/apps](http://www.richsomerfield.
 ## Contributions
 Please submit pull-requests so that I can add your ideas/scripts.
 
-## Latest Major Features
-
-[Release Notes](http://www.richsomerfield.com/apps/textbar/releasenotes_textbar.html)
-
-## Troubleshooting
-
-If you encounter problems with TextBar, you can enable logging. How to:
-* Run 'defaults write com.RichSomerfield.TextBar ScriptLogging -bool true'
-* Restart TextBar app
-* Open the macOS Console app, and use 'TextBar' filter
-
-![ConsoleApp](Screenshots/ConsoleApp.png)
-
-To disable the extended logging:
-* Run 'defaults delete com.RichSomerfield.TextBar ScriptLogging'
-* Restart TextBar app
-
 ----
 
-## New for TextBar v3.2.2
+## TextBar License
 
-TextBar Mac licenses work with either v1, v2 and v3 - there is **no** upgrade fee for v3.
+TextBar requires a license (after the 7 day trial period). But, TextBar Mac licenses work with all versions of TextBar; v1, v2 and v3 - there is **no** upgrade fee for v3.
 
 TextBar repesents a huge amount of work. If you would like to donate that would be very much appreciated.
 
 **Donate:** [paypal.me/richie5um](https://www.paypal.me/richie5um)
+
+----
+
+## Latest Major Features
+
+[Release Notes](http://www.richsomerfield.com/apps/textbar/releasenotes_textbar.html)
+
+----
+
+## New for TextBar v3.2.2
 
 ### Show Charts in MenuBar
 
@@ -127,6 +120,23 @@ Here are the major new items for v2...
 * View your TextBar items on the web:
 
 ![TextBar Live Items](Screenshots/TextBarLiveItems.png)
+
+----
+
+## Troubleshooting
+
+If you encounter problems with TextBar, you can enable logging. How to:
+* Run 'defaults write com.RichSomerfield.TextBar ScriptLogging -bool true'
+* Restart TextBar app
+* Open the macOS Console app, and use 'TextBar' filter
+
+![ConsoleApp](Screenshots/ConsoleApp.png)
+
+To disable the extended logging:
+* Run 'defaults delete com.RichSomerfield.TextBar ScriptLogging'
+* Restart TextBar app
+
+----
 
 ### Dynamic Values
 
@@ -224,13 +234,15 @@ All TextBar items show the last updated time in the menu.
 
 ![Last Update](Screenshots/UpdatedAt.png)
 
+----
+
 ## Recipes
 
 ### What is my Local IP address?
     ifconfig | grep inet | grep -v inet6 | cut -d" " -f2 | tail -n1
 
 ### What is my external IP address?
-    curl http://ipinfo.io/ip
+    curl -s http://ipinfo.io/ip
 
 ### What SSID is being used for en0
     $HOME/scripts/ssid.sh
@@ -242,7 +254,7 @@ All TextBar items show the last updated time in the menu.
 > This is much better than the SSID command that comes by default in TextBar.
 
 ### What is my (approximate) location?
-    curl http://freegeoip.net/csv/ | awk -F',' '{print $6}'
+    curl -s http://freegeoip.net/csv/ | awk -F',' '{print $6}'
 
 ### What is my latency to Google's DNS Servers?
     ping -c 1 8.8.8.8 | awk -F" |=" '/time/{print $10"ms"}'
