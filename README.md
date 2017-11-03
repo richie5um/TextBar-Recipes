@@ -25,13 +25,49 @@ To disable the extended logging:
 
 ----
 
-## New for TextBar v3
+## New for TextBar v3.2.2
 
 TextBar Mac licenses work with either v1, v2 and v3 - there is **no** upgrade fee for v3.
 
-TextBar v3 repesents a huge amount of work. If you would like to donate that would be very much appreciated.
+TextBar repesents a huge amount of work. If you would like to donate that would be very much appreciated.
 
 **Donate:** [paypal.me/richie5um](https://www.paypal.me/richie5um)
+
+### Show Charts in MenuBar
+
+TextBar has an internal charting format to show charts in your MenuBar.
+
+![TextBar Charts](Screenshots/webcharts.png)
+
+Example here: [Bitcoin Close Price](Items/Bitcoin%20Price%20(daily%20close).textbar)
+> Note: Requires accessing www.coinbase.com in your Safari web browser to approve access first.
+
+Open the script to see how it works.
+
+More examples here: [TextBar Items](Items)
+> Please submit them and I'll include them here :).
+
+### Show HTML in MenuBar
+
+TextBar can show HTML in your menubar - to give you ultimate control / customizability [sic].
+
+![TextBar Web bar](Screenshots/webbar.png)
+
+Example here: [Calendar](Items/Calendar.textbar)
+
+> Note: This example uses HTML for MenuBar and HTML for Popover.
+
+### Added native support for Proxy Configuration in Prefernces > Network
+
+![TextBar Proxy Settings](Screenshots/proxysettings.png)
+
+### Improvements to control in Prefernces > Advanced
+
+![TextBar Advanced](Screenshots/advanced.png)
+
+----
+
+## New for TextBar v3
 
 Here are the major new items for v3...
 
@@ -55,7 +91,7 @@ The old Import/Export mechanism is still available for backups of your configure
 
 ### Shortcut to Refresh
 
-You can now assign a shortcut key to a TextBar Item so you can quick refresh it. You could use use this as a simple script runner :-). 
+You can now assign a shortcut key to a TextBar Item so you can quick refresh it. You could use use this as a simple script runner :-).
 
 ### Drag and Drop Images
 
@@ -225,7 +261,7 @@ All TextBar items show the last updated time in the menu.
     ALIVE=\`curl -Is www.google.com | grep -q "200 OK"\` && echo "Google Alive" || echo "Google Dead"
 
 ### Site Status - determine if multiple websites are running
-	$HOME/scripts/SiteStatus.sh 
+	$HOME/scripts/SiteStatus.sh
 > Download SiteStatus.sh to your machine (to ~/scripts), and then add this to TextBar.	Read the script as you need to create a directory and file to list websites.
 > ###### [Download Script](Scripts/SiteStatus.sh)
 
