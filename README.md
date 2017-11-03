@@ -26,6 +26,8 @@ TextBar repesents a huge amount of work. If you would like to donate that would 
 
 ## New for TextBar v3.2.2
 
+TextBar v3.2 has **major** new features over v3.1. But, as I've only recently released v3 it seems simpler to keep the v3 prefix.
+
 ### Show Charts in MenuBar
 
 TextBar has an internal charting format to show charts in your MenuBar.
