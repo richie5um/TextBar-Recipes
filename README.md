@@ -39,7 +39,7 @@ TextBar has an internal charting format to show charts in your MenuBar.
 
 ![TextBar Charts](Screenshots/webcharts.png)
 
-Example here: [Bitcoin Close Price](Items/Bitcoin%20Price%20(daily%20close).textbar)
+Example here: [Bitcoin Close Price](https://github.com/richie5um/TextBar-Recipes/blob/master/Items/Bitcoin%20Price%20(daily%20close).textbar?raw=true)
 > Note: Requires accessing www.coinbase.com in your Safari web browser to approve access first.
 
 Open the script to see how it works.
@@ -53,7 +53,7 @@ TextBar can show HTML in your menubar - to give you ultimate control / customiza
 
 ![TextBar Web bar](Screenshots/webbar.png)
 
-Example here: [Calendar](Items/Calendar.textbar)
+Example here: [Calendar](https://github.com/richie5um/TextBar-Recipes/blob/master/Items/Calendar.textbar?raw=true)
 
 > Note: This example uses HTML for MenuBar and HTML for Popover.
 
