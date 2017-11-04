@@ -34,8 +34,8 @@ TextBar has an internal charting format to show charts in your MenuBar.
 
 ![TextBar Charts](Screenshots/webcharts.png)
 
-Example here: [Bitcoin Close Price - USD](https://github.com/richie5um/TextBar-Recipes/blob/master/Items/Bitcoin%20Price%20USD%20(daily%20close).textbar?raw=true)
-Example here: [Bitcoin Close Price - GBP](https://github.com/richie5um/TextBar-Recipes/blob/master/Items/Bitcoin%20Price%20GBP%20(daily%20close).textbar?raw=true)
+<p>Example here: [Bitcoin Close Price - USD](https://github.com/richie5um/TextBar-Recipes/blob/master/Items/Bitcoin%20Price%20USD%20(daily%20close).textbar?raw=true)</p>
+<p>Example here: [Bitcoin Close Price - GBP](https://github.com/richie5um/TextBar-Recipes/blob/master/Items/Bitcoin%20Price%20GBP%20(daily%20close).textbar?raw=true)</p>
 > Note: Requires accessing www.coinbase.com in your Safari web browser to approve access first.
 
 Open the script to see how it works.
