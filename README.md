@@ -399,7 +399,8 @@ All TextBar items show the last updated time in the menu.
     echo "B:" `ioreg -c AppleBluetoothHIDKeyboard | grep '"BatteryPercent" ='  | sed 's/[^0-9]*//g'`"%"
 
 > Note: For Magic Mouse 2, you may need to use this instead (change 'Magic Mouse 2' if you've renamed your device):
-	echo "M: "`ioreg -l | grep -A 10 "Magic Mouse 2" | grep '"BatteryPercent" =' | sed 's/[^0-9]*//g'`"%"
+
+    echo "M: "`ioreg -l | grep -A 10 "Magic Mouse 2" | grep '"BatteryPercent" =' | sed 's/[^0-9]*//g'`"%"
 
 ![Battery](Screenshots/MouseKeyboardBattery.png)
 > Add these as two separate items.
