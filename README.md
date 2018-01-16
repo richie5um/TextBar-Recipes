@@ -449,6 +449,9 @@ Key pressed today:
     test -f $HOME/tmp/stand && { echo "Stand" && rm $HOME/tmp/stand } || { echo "Sit" && touch $HOME/tmp/stand }
 > Configure with whatever refresh frequency you want - in TextBar Preferences.
 
+### Next Today Task from Things3
+    osascript -e 'tell application "Things3"' -e 'get name of second to do in list "Today"' -e 'end tell'
+
 ## ANSI Escape Colors
     echo 'Normal \e[41m Other '
 > This is an example.
