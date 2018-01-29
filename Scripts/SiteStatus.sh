@@ -29,7 +29,7 @@ while read p; do
         DISPLAYNAME=${WWW[1]}
     fi
 
-    response=$(curl -L --write-out %{http_code} --silent --output /dev/null ${WWW[0]})
+    response=$(/usr/bin/curl -L --referer ${WWW[0]} --user-agent "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36" --write-out %{http_code} --silent --output /dev/null ${WWW[0]})
 
     if [ $response -eq 200 ] ; then
         # Site up        
