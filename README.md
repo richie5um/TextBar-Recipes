@@ -495,6 +495,8 @@ The HTML support is fairly limited, it supports text and images. The text can be
 
 > Requires you to name your wallpapers for each space - see notes in the script for more details. Download SpaceNumber.sh to your machine (to ~/scripts). and then add this to TextBar.
 
+## External TextBar Recipe Sites
+* [https://github.com/raguay/TextBarScripts](https://github.com/raguay/TextBarScripts)
 
 ## Preferences
 > Requires TextBar v1.4.9 (or later)
