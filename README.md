@@ -54,7 +54,7 @@ Example here: [Calendar](https://github.com/richie5um/TextBar-Recipes/blob/maste
 
 > Note: This example uses HTML for MenuBar and HTML for Popover.
 
-### Added native support for Proxy Configuration in Prefernces > Network
+### Added native support for Proxy Configuration in Preferences > Network
 
 ![TextBar Proxy Settings](Screenshots/proxysettings.png)
 
