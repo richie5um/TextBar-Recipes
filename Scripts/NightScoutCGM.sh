@@ -15,6 +15,7 @@ VALUE=$(echo $DATA | awk '{print $3}')
 DIRECTION=$(echo $DATA | awk '{print $4}' | sed 's/\"//g')
 TIME=$(echo $DATA | awk '{print $1}' | date +'%I:%M %p')
 # This maps the direction strings to nice Unicode characters
+DIRECTION=$(echo $DIRECTION | sed 's/NONE/⇼/')
 DIRECTION=$(echo $DIRECTION | sed 's/TripleUp/⤊/')
 DIRECTION=$(echo $DIRECTION | sed 's/DoubleUp/⇈/')
 DIRECTION=$(echo $DIRECTION | sed 's/SingleUp/↑/')
