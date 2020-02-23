@@ -19,6 +19,6 @@ DIRECTION=$(echo $DIRECTION | sed 's/Flat/→/')
 DIRECTION=$(echo $DIRECTION | sed 's/FortyFiveDown/↘/')
 DIRECTION=$(echo $DIRECTION | sed 's/SingleDown/↓/')
 DIRECTION=$(echo $DIRECTION | sed 's/DoubleDown/⇊/')
-DIRECTION=$(echo $DIRECTION | sed 's/TripeDown/⤋/')
+DIRECTION=$(echo $DIRECTION | sed 's/TripleDown/⤋/')
 # The end result
 echo $VALUE $DIRECTION @ $TIME
