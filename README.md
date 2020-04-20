@@ -14,7 +14,7 @@ TextBar requires a license (after the 7 day trial period). But, TextBar Mac lice
 
 TextBar repesents a huge amount of work. If you would like to donate that would be very much appreciated.
 
-<a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/richie5um"><strong>Buy me a coffee</strong><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"></a>
+<a target="_blank" href="https://www.buymeacoffee.com/richie5um"><img src="Resources/buymeacoffee.png" alt="Buy me a coffee"></a>
 
 **Or via Paypal:** [paypal.me/richie5um](https://www.paypal.me/richie5um)
 
