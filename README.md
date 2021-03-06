@@ -60,7 +60,7 @@ Example here: [Calendar](https://github.com/richie5um/TextBar-Recipes/blob/maste
 
 ![TextBar Proxy Settings](Screenshots/proxysettings.png)
 
-### Improvements to control in Prefernces > Advanced
+### Improvements to control in Preferences > Advanced
 
 ![TextBar Advanced](Screenshots/advanced.png)
 
