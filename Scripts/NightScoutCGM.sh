@@ -9,8 +9,24 @@
 #
 #    ❯ ./NightScoutCGM.sh https://cgmtest.herokuapp.com
 #    166 → @ 09:42 AM
+#
+# You can supply an option API secret if you're using NightScout in secure
+# mode. Example:
+#
+#    ❯ ./NightScoutCGM.sh https://cgmtest.herokuapp.com 12345789
+#    166 → @ 09:42 AM
+#
+# For more information on securing NightScout see:
+#
+#   https://nightscout.github.io/nightscout/security/
+#
+# For more information on using API secret tokens with a secure NightScout
+# installation see:
+#
+#   https://github.com/nightscout/cgm-remote-monitor/wiki/API-v1-Security
 
-DATA=$(curl --silent --fail ${1}/api/v1/entries/current)
+API_SECRET=${2:-notdefined}
+DATA=$(curl --silent --fail --header "API-SECRET: ${API_SECRET}" ${1}/api/v1/entries/current)
 VALUE=$(echo $DATA | awk '{print $3}')
 DIRECTION=$(echo $DATA | awk '{print $4}' | sed 's/\"//g')
 TIME=$(echo $DATA | awk '{print $1}' | date +'%I:%M %p')
