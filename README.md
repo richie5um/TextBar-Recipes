@@ -142,6 +142,11 @@ To disable the extended logging:
 * Run 'defaults delete com.RichSomerfield.TextBar ScriptLogging'
 * Restart TextBar app
 
+If TextBar is crashing on launch, you can try disabling the scripts:
+* Run 'defaults write com.RichSomerfield.TextBar DisableItemsOnStart -bool true'
+* Restart TextBar app
+* Run 'defaults delete com.RichSomerfield.TextBar DisableItemsOnStart'
+
 ----
 
 ### Dynamic Values
